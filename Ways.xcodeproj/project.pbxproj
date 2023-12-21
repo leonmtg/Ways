@@ -10,6 +10,10 @@
 		3510558D2B3425FD00935932 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510558C2B3425FD00935932 /* MeView.swift */; };
 		3510558F2B34264900935932 /* AllWaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510558E2B34264900935932 /* AllWaysView.swift */; };
 		351055912B34265900935932 /* MyWays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351055902B34265900935932 /* MyWays.swift */; };
+		351055942B34408800935932 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351055932B34408800935932 /* Database.swift */; };
+		351055972B34507F00935932 /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351055962B34507F00935932 /* Way.swift */; };
+		351055992B3450A200935932 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351055982B3450A200935932 /* Tag.swift */; };
+		3510559B2B34535200935932 /* WayContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510559A2B34535200935932 /* WayContext.swift */; };
 		3570ED742B33001A00977D93 /* WaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570ED732B33001A00977D93 /* WaysApp.swift */; };
 		3570ED762B33001A00977D93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570ED752B33001A00977D93 /* ContentView.swift */; };
 		3570ED782B33001B00977D93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3570ED772B33001B00977D93 /* Assets.xcassets */; };
@@ -41,6 +45,10 @@
 		3510558C2B3425FD00935932 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		3510558E2B34264900935932 /* AllWaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWaysView.swift; sourceTree = "<group>"; };
 		351055902B34265900935932 /* MyWays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWays.swift; sourceTree = "<group>"; };
+		351055932B34408800935932 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		351055962B34507F00935932 /* Way.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Way.swift; sourceTree = "<group>"; };
+		351055982B3450A200935932 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		3510559A2B34535200935932 /* WayContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayContext.swift; sourceTree = "<group>"; };
 		3570ED702B33001A00977D93 /* Ways.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ways.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3570ED732B33001A00977D93 /* WaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaysApp.swift; sourceTree = "<group>"; };
 		3570ED752B33001A00977D93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +87,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		351055922B34407200935932 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				351055932B34408800935932 /* Database.swift */,
+				3510559A2B34535200935932 /* WayContext.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		351055952B34505500935932 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				351055962B34507F00935932 /* Way.swift */,
+				351055982B3450A200935932 /* Tag.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3570ED672B33001A00977D93 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +133,8 @@
 				351055902B34265900935932 /* MyWays.swift */,
 				3510558E2B34264900935932 /* AllWaysView.swift */,
 				3510558C2B3425FD00935932 /* MeView.swift */,
+				351055952B34505500935932 /* Models */,
+				351055922B34407200935932 /* Services */,
 				3570ED772B33001B00977D93 /* Assets.xcassets */,
 				3570ED792B33001B00977D93 /* Preview Content */,
 			);
@@ -274,11 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				351055992B3450A200935932 /* Tag.swift in Sources */,
+				351055972B34507F00935932 /* Way.swift in Sources */,
 				3510558F2B34264900935932 /* AllWaysView.swift in Sources */,
+				351055942B34408800935932 /* Database.swift in Sources */,
 				3510558D2B3425FD00935932 /* MeView.swift in Sources */,
 				3570ED762B33001A00977D93 /* ContentView.swift in Sources */,
 				351055912B34265900935932 /* MyWays.swift in Sources */,
 				3570ED742B33001A00977D93 /* WaysApp.swift in Sources */,
+				3510559B2B34535200935932 /* WayContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
