@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class Tag {
+final class Tag {
     var name: String
     
     init(name: String) {

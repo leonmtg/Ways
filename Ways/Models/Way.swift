@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class Way {
+final class Way {
     var name: String
     
     init(name: String) {

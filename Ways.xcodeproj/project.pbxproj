@@ -22,6 +22,7 @@
 		3570ED8F2B33001B00977D93 /* WaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570ED8E2B33001B00977D93 /* WaysUITests.swift */; };
 		3570ED912B33001B00977D93 /* WaysUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570ED902B33001B00977D93 /* WaysUITestsLaunchTests.swift */; };
 		35CFD0582B330156001BA959 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 35CFD0572B330156001BA959 /* ComposableArchitecture */; };
+		35D674F52B36D3970035C87E /* TagContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D674F42B36D3970035C87E /* TagContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3570ED8A2B33001B00977D93 /* WaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3570ED8E2B33001B00977D93 /* WaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaysUITests.swift; sourceTree = "<group>"; };
 		3570ED902B33001B00977D93 /* WaysUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaysUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		35D674F42B36D3970035C87E /* TagContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +92,9 @@
 		351055922B34407200935932 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				351055932B34408800935932 /* Database.swift */,
 				3510559A2B34535200935932 /* WayContext.swift */,
+				35D674F42B36D3970035C87E /* TagContext.swift */,
+				351055932B34408800935932 /* Database.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				351055942B34408800935932 /* Database.swift in Sources */,
 				3510558D2B3425FD00935932 /* MeView.swift in Sources */,
 				3570ED762B33001A00977D93 /* ContentView.swift in Sources */,
+				35D674F52B36D3970035C87E /* TagContext.swift in Sources */,
 				351055912B34265900935932 /* MyWays.swift in Sources */,
 				3570ED742B33001A00977D93 /* WaysApp.swift in Sources */,
 				3510559B2B34535200935932 /* WayContext.swift in Sources */,

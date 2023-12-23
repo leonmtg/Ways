@@ -15,16 +15,7 @@ struct Database {
 
 extension Database: DependencyKey {
     static let liveValue = Self(
-        modelContext: {
-            do {
-                let url = URL.applicationSupportDirectory.appending(path: "Model.sqlite")
-                let config = ModelConfiguration(url: url)
-                let container = try ModelContainer(for: Way.self, Tag.self, configurations: config)
-                return ModelContext(container)
-            } catch {
-                fatalError("Failed to create container.")
-            }
-        }
+        modelContext: { appContext }
     )
 }
 
@@ -34,3 +25,14 @@ extension DependencyValues {
         set { self[Database.self] = newValue }
     }
 }
+
+fileprivate let appContext: ModelContext = {
+    do {
+        let url = URL.applicationSupportDirectory.appending(path: "Model.sqlite")
+        let config = ModelConfiguration(url: url)
+        let container = try ModelContainer(for: Way.self, Tag.self, configurations: config)
+        return ModelContext(container)
+    } catch {
+        fatalError("Failed to create container.")
+    }
+}()
