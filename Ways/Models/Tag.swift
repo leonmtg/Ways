@@ -11,8 +11,10 @@ import SwiftData
 @Model
 final class Tag {
     var name: String
+    var ways: [Way]
     
-    init(name: String) {
+    init(name: String, ways: [Way]) {
         self.name = name
+        self.ways = ways
     }
 }
