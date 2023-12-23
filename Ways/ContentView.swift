@@ -6,8 +6,18 @@
 //
 
 import SwiftUI
+import Dependencies
+import SwiftData
 
 struct ContentView: View {
+    @Dependency(\.database) var database
+    var modelContext: ModelContext {
+        guard let modelContext = try? self.database.modelContext() else {
+            fatalError("Could not find modelContext")
+        }
+        return modelContext
+    }
+    
     var body: some View {
         TabView {
             MyWays()
@@ -15,10 +25,16 @@ struct ContentView: View {
                     Label("My Ways", systemImage: "lightbulb.min")
                         .environment(\.symbolVariants, .none)
                 }
-            AllWaysView()
-                .tabItem {
-                    Label("All Ways", systemImage: "infinity")
-                }
+            
+            AllWaysView(store: .init(initialState: .init(), reducer: {
+                AllWaysReducer()
+                    ._printChanges()
+            }))
+            .modelContext(self.modelContext)
+            .tabItem {
+                Label("All Ways", systemImage: "infinity")
+            }
+            
             MeView()
                 .tabItem {
                     Label("Me", systemImage: "person")
