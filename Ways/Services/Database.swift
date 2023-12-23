@@ -17,6 +17,12 @@ extension Database: DependencyKey {
     static let liveValue = Self(
         modelContext: { appContext }
     )
+    static let previewValue = Self(
+        modelContext: { onlyMemoryContext }
+    )
+    static let testValue = Self(
+        modelContext: { onlyMemoryContext }
+    )
 }
 
 extension DependencyValues {
@@ -30,6 +36,16 @@ fileprivate let appContext: ModelContext = {
     do {
         let url = URL.applicationSupportDirectory.appending(path: "Model.sqlite")
         let config = ModelConfiguration(url: url)
+        let container = try ModelContainer(for: Way.self, Tag.self, configurations: config)
+        return ModelContext(container)
+    } catch {
+        fatalError("Failed to create container.")
+    }
+}()
+
+let onlyMemoryContext: ModelContext = {
+    do {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: Way.self, Tag.self, configurations: config)
         return ModelContext(container)
     } catch {

@@ -47,13 +47,19 @@ struct AllWaysView: View {
 }
 
 #Preview {
-    AllWaysView(
-        store: Store(
-            initialState: AllWaysReducer.State(
-                ways: []
-            )
-        ) {
-            AllWaysReducer()
+    TabView {
+        AllWaysView(
+            store: Store(
+                initialState: AllWaysReducer.State(
+                    ways: []
+                )
+            ) {
+                AllWaysReducer()
+            }
+        )
+        .modelContext(onlyMemoryContext)
+        .tabItem {
+            Label("All Ways", systemImage: "infinity")
         }
-    )
+    }
 }
