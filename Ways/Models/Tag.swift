@@ -12,9 +12,18 @@ import SwiftData
 final class Tag {
     var name: String
     var ways: [Way]
+    var metatag: Metatag
     
-    init(name: String, ways: [Way]) {
+    enum Metatag {
+        case VARK
+        case Way
+        case Level
+        case Age
+    }
+    
+    init(name: String, ways: [Way], metatag: Metatag) {
         self.name = name
         self.ways = ways
+        self.metatag = metatag
     }
 }
