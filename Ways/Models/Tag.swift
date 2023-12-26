@@ -18,7 +18,7 @@ enum Metatag: String, Codable {
 @Model
 final class Tag {
     var name: String
-    @Relationship(inverse: \Way.tags) var ways: [Way]
+    var ways: [Way] // No @Reletionship here
     var metatag: Metatag
     
     init(name: String, ways: [Way], metatag: Metatag) {

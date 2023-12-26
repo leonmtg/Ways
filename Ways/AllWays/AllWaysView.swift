@@ -48,7 +48,9 @@ struct AllWaysView: View {
 }
 
 #Preview {
-    TabView {
+    let context = onlyMemoryContext // Must access container or context first here before use Models
+    
+    return TabView {
         AllWaysView(
             store: Store(
                 initialState: AllWaysReducer.State(
@@ -58,7 +60,7 @@ struct AllWaysView: View {
                 AllWaysReducer()
             }
         )
-        .modelContext(onlyMemoryContext)
+        .modelContext(context)
         .tabItem {
             Label("All Ways", systemImage: "infinity")
         }

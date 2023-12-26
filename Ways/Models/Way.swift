@@ -12,7 +12,7 @@ import SwiftData
 final class Way {
     var name: String
     // Prevent from too many Tags
-    @Relationship(maximumModelCount: 10) var tags: [Tag]
+    @Relationship(maximumModelCount: 10, inverse: \Tag.ways) var tags: [Tag]
     
     init(name: String, tags: [Tag]) {
         self.name = name

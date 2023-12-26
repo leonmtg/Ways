@@ -10,17 +10,21 @@ import SwiftData
 import Dependencies
 
 struct Database {
+    var modelContainer: () throws -> ModelContainer
     var modelContext: () throws -> ModelContext
 }
 
 extension Database: DependencyKey {
     static let liveValue = Self(
-        modelContext: { appContext }
+        modelContainer: { directoryModelContainer },
+        modelContext: { directoryModelContext }
     )
     static let previewValue = Self(
+        modelContainer: { onlyMemoryContainer },
         modelContext: { onlyMemoryContext }
     )
     static let testValue = Self(
+        modelContainer: { onlyMemoryContainer },
         modelContext: { onlyMemoryContext }
     )
 }
@@ -32,23 +36,31 @@ extension DependencyValues {
     }
 }
 
-fileprivate let appContext: ModelContext = {
+fileprivate let directoryModelContainer: ModelContainer = {
     do {
         let url = URL.applicationSupportDirectory.appending(path: "Model.sqlite")
         let config = ModelConfiguration(url: url)
         let container = try ModelContainer(for: Way.self, Tag.self, configurations: config)
-        return ModelContext(container)
+        return container
+    } catch {
+        fatalError("Failed to create container.")
+    }
+}()
+
+fileprivate let directoryModelContext: ModelContext = {
+    return ModelContext(directoryModelContainer)
+}()
+
+let onlyMemoryContainer: ModelContainer = {
+    do {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: Way.self, Tag.self, configurations: config)
+        return container
     } catch {
         fatalError("Failed to create container.")
     }
 }()
 
 let onlyMemoryContext: ModelContext = {
-    do {
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
-        let container = try ModelContainer(for: Way.self, Tag.self, configurations: config)
-        return ModelContext(container)
-    } catch {
-        fatalError("Failed to create container.")
-    }
+    return ModelContext(onlyMemoryContainer)
 }()
