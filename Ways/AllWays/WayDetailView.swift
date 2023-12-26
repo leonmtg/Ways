@@ -14,9 +14,9 @@ struct WayDetailView: View {
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             Form {
-              Button("Delete") {
-                viewStore.send(.deleteButtonTapped)
-              }
+                Button("Delete") {
+                    viewStore.send(.deleteButtonTapped)
+                }
             }
             .navigationTitle(Text(viewStore.way.name))
         }
@@ -25,7 +25,9 @@ struct WayDetailView: View {
 }
 
 #Preview {
-    NavigationStack {
+    let context = onlyMemoryContext // Must access container or context first here before use Models
+    
+    return NavigationStack {
         WayDetailView(
             store: Store(
                 initialState: WayDetailReducer.State(
@@ -39,4 +41,5 @@ struct WayDetailView: View {
             }
         )
     }
+    .modelContext(context)
 }
