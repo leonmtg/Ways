@@ -12,19 +12,13 @@ import ComposableArchitecture
 struct AllWaysView: View {
     let store: StoreOf<AllWaysReducer>
     
-    @Query(FetchDescriptor<Way>()) var ways: [Way] {
-        didSet {
-            print(oldValue)
-            print(newValue)
-            store.send(.queryChangedWays(newValue))
-        }
-    }
+    @Query(FetchDescriptor<Way>()) var ways: [Way]
     
     var body: some View {
-        WithViewStore(store, observe: { $0 }) { viewStore in
+        WithViewStore(store, observe: \.ways) { viewStore in
             NavigationStack {
                 List {
-                    ForEach(self.ways) { way in
+                    ForEach(viewStore.state) { way in
                         VStack {
                             Text("\(way.name)").font(.title)
                         }
@@ -40,6 +34,9 @@ struct AllWaysView: View {
                     Button("Add sample", systemImage: "plus") {
                         viewStore.send(.addWay, animation: .snappy)
                     }
+                }
+                .onChange(of: self.ways, initial: true) { _, newValue in
+                    viewStore.send(.queryWaysChanged(newValue))
                 }
             }
         }

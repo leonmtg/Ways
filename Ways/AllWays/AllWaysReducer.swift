@@ -15,7 +15,7 @@ struct AllWaysReducer {
     }
     
     enum Action: Equatable {
-        case queryChangedWays([Way])
+        case queryWaysChanged([Way])
         case addWay
         case deleteWay(Way)
     }
@@ -25,7 +25,7 @@ struct AllWaysReducer {
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
-            case let .queryChangedWays(ways):
+            case let .queryWaysChanged(ways):
                 state.ways = ways
                 return .none
             case .addWay:
