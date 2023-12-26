@@ -15,21 +15,23 @@ struct AllWaysView: View {
     @Query(FetchDescriptor<Way>()) var ways: [Way]
     
     var body: some View {
-        WithViewStore(store, observe: \.ways) { viewStore in
-            NavigationStack {
+        NavigationStackStore(self.store.scope(state: \.path, action: \.path)) {
+            WithViewStore(store, observe: \.ways) { viewStore in
                 List {
                     ForEach(viewStore.state) { way in
-                        VStack {
-                            Text("\(way.name)").font(.title)
-                        }
-                        .swipeActions {
-                            Button("Delete", systemImage: "trash", role: .destructive) {
-                                viewStore.send(.deleteWay(way), animation: .snappy)
+                        NavigationLink(state: WayDetailReducer.State(way: way)) {
+                            VStack {
+                                Text("\(way.name)").font(.title)
+                            }
+                            .swipeActions {
+                                Button("Delete", systemImage: "trash", role: .destructive) {
+                                    viewStore.send(.deleteWay(way), animation: .snappy)
+                                }
                             }
                         }
                     }
                 }
-                .navigationTitle("Ways Query")
+                .navigationTitle("Ways")
                 .toolbar {
                     Button("Add sample", systemImage: "plus") {
                         viewStore.send(.addWay, animation: .snappy)
@@ -39,6 +41,8 @@ struct AllWaysView: View {
                     viewStore.send(.queryWaysChanged(newValue))
                 }
             }
+        } destination: { store in
+            WayDetailView(store: store)
         }
     }
 }

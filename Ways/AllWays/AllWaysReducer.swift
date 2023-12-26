@@ -12,12 +12,14 @@ import ComposableArchitecture
 struct AllWaysReducer {
     struct State: Equatable {
         var ways: [Way] = []
+        var path = StackState<WayDetailReducer.State>()
     }
     
     enum Action: Equatable {
         case queryWaysChanged([Way])
         case addWay
         case deleteWay(Way)
+        case path(StackAction<WayDetailReducer.State, WayDetailReducer.Action>)
     }
     
     @Dependency(\.wayContext) var context
@@ -43,7 +45,12 @@ struct AllWaysReducer {
                     print("Failed to delete")
                 }
                 return .none
+            case .path:
+                return .none
             }
+        }
+        .forEach(\.path, action: \.path) {
+          WayDetailReducer()
         }
     }
 }
