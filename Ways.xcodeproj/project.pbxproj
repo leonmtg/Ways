@@ -14,6 +14,8 @@
 		351055972B34507F00935932 /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351055962B34507F00935932 /* Way.swift */; };
 		351055992B3450A200935932 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351055982B3450A200935932 /* Tag.swift */; };
 		3510559B2B34535200935932 /* WayContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510559A2B34535200935932 /* WayContext.swift */; };
+		354E424F2B44219E0097F5C4 /* WayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E424E2B44219E0097F5C4 /* WayService.swift */; };
+		354E42532B44245C0097F5C4 /* HTTPResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E42522B44245C0097F5C4 /* HTTPResponseError.swift */; };
 		355C773D2B42A64A006B4BE6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C773C2B42A64A006B4BE6 /* User.swift */; };
 		355C773F2B42AB7E006B4BE6 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C773E2B42AB7E006B4BE6 /* Client.swift */; };
 		355C77412B42B0B1006B4BE6 /* allWays.json in Resources */ = {isa = PBXBuildFile; fileRef = 355C77402B42B0B1006B4BE6 /* allWays.json */; };
@@ -58,6 +60,8 @@
 		351055962B34507F00935932 /* Way.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Way.swift; sourceTree = "<group>"; };
 		351055982B3450A200935932 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		3510559A2B34535200935932 /* WayContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayContext.swift; sourceTree = "<group>"; };
+		354E424E2B44219E0097F5C4 /* WayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayService.swift; sourceTree = "<group>"; };
+		354E42522B44245C0097F5C4 /* HTTPResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseError.swift; sourceTree = "<group>"; };
 		355C773C2B42A64A006B4BE6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		355C773E2B42AB7E006B4BE6 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		355C77402B42B0B1006B4BE6 /* allWays.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allWays.json; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				35D674F42B36D3970035C87E /* TagContext.swift */,
 				351055932B34408800935932 /* Database.swift */,
 				355C773E2B42AB7E006B4BE6 /* Client.swift */,
+				354E424E2B44219E0097F5C4 /* WayService.swift */,
+				354E42522B44245C0097F5C4 /* HTTPResponseError.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 				351055992B3450A200935932 /* Tag.swift in Sources */,
 				351055972B34507F00935932 /* Way.swift in Sources */,
 				3510558F2B34264900935932 /* AllWaysView.swift in Sources */,
+				354E42532B44245C0097F5C4 /* HTTPResponseError.swift in Sources */,
 				358F11A72B3AE10B00EFC68A /* WayDetailView.swift in Sources */,
 				351055942B34408800935932 /* Database.swift in Sources */,
 				3510558D2B3425FD00935932 /* MeView.swift in Sources */,
@@ -361,6 +368,7 @@
 				358F11A52B3AE0FB00EFC68A /* WayDetailReducer.swift in Sources */,
 				35D674F52B36D3970035C87E /* TagContext.swift in Sources */,
 				351055912B34265900935932 /* MyWays.swift in Sources */,
+				354E424F2B44219E0097F5C4 /* WayService.swift in Sources */,
 				3570ED742B33001A00977D93 /* WaysApp.swift in Sources */,
 				3510559B2B34535200935932 /* WayContext.swift in Sources */,
 			);

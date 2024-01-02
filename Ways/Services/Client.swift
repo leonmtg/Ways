@@ -35,20 +35,26 @@ extension DependencyValues {
     }
 }
 
-fileprivate let loadLocalAllWays: () async throws -> [Way] = {
-    guard let url = Bundle.main.url(forResource: "allWays", withExtension: "json") else {
-        fatalError("Failed to find allWays.json")
+fileprivate let loadLocalAllWays = {
+    return {
+        guard let url = Bundle.main.url(forResource: "allWays", withExtension: "json") else {
+            fatalError("Failed to find allWays.json")
+        }
+        let data = try Data(contentsOf: url)
+        let ways = try JSONDecoder().decode([Way].self, from: data)
+        return ways
     }
-    let data = try Data(contentsOf: url)
-    let ways = try JSONDecoder().decode([Way].self, from: data)
-    return ways
 }()
 
-fileprivate let loadLocalWay = { _ in
-    guard let url = Bundle.main.url(forResource: "way", withExtension: "json") else {
-        fatalError("Failed to find way.json")
+fileprivate let loadLocalWay: (Int) async throws -> Way = {
+    return { _ in
+        guard let url = Bundle.main.url(forResource: "way", withExtension: "json") else {
+            fatalError("Failed to find way.json")
+        }
+        let data = try Data(contentsOf: url)
+        let way = try JSONDecoder().decode(Way.self, from: data)
+        return way
     }
-    let data = try Data(contentsOf: url)
-    let way = try JSONDecoder().decode(Way.self, from: data)
-    return way
-}(Int)
+}()
+
+
