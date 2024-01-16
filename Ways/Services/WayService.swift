@@ -49,7 +49,7 @@ extension WayService: WaysPublisherProtocol {
                 
                 return data
             }
-            .decode(type: [Way].self, decoder: JSONDecoder())
+            .decode(type: [Way].self, decoder: JSONDecoder.decoderWithStrategy)
             .mapError { error -> HTTPResponseError in
                 if let httpResponseError = error as? HTTPResponseError {
                     return httpResponseError

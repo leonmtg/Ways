@@ -28,6 +28,9 @@
 		3570ED852B33001B00977D93 /* WaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570ED842B33001B00977D93 /* WaysTests.swift */; };
 		3570ED8F2B33001B00977D93 /* WaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570ED8E2B33001B00977D93 /* WaysUITests.swift */; };
 		3570ED912B33001B00977D93 /* WaysUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570ED902B33001B00977D93 /* WaysUITestsLaunchTests.swift */; };
+		3579DBC12B5699E0006D0FC3 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3579DBC02B5699E0006D0FC3 /* Comment.swift */; };
+		3579DBC52B56A7AA006D0FC3 /* DateFormater+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3579DBC42B56A7AA006D0FC3 /* DateFormater+.swift */; };
+		3579DBC72B56A977006D0FC3 /* JSONDecoder+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3579DBC62B56A977006D0FC3 /* JSONDecoder+.swift */; };
 		358F11A52B3AE0FB00EFC68A /* WayDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F11A42B3AE0FB00EFC68A /* WayDetailReducer.swift */; };
 		358F11A72B3AE10B00EFC68A /* WayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F11A62B3AE10B00EFC68A /* WayDetailView.swift */; };
 		35CFD0582B330156001BA959 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 35CFD0572B330156001BA959 /* ComposableArchitecture */; };
@@ -77,6 +80,9 @@
 		3570ED8A2B33001B00977D93 /* WaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3570ED8E2B33001B00977D93 /* WaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaysUITests.swift; sourceTree = "<group>"; };
 		3570ED902B33001B00977D93 /* WaysUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaysUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3579DBC02B5699E0006D0FC3 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		3579DBC42B56A7AA006D0FC3 /* DateFormater+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormater+.swift"; sourceTree = "<group>"; };
+		3579DBC62B56A977006D0FC3 /* JSONDecoder+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+.swift"; sourceTree = "<group>"; };
 		358F11A42B3AE0FB00EFC68A /* WayDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayDetailReducer.swift; sourceTree = "<group>"; };
 		358F11A62B3AE10B00EFC68A /* WayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayDetailView.swift; sourceTree = "<group>"; };
 		35D674F42B36D3970035C87E /* TagContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagContext.swift; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				351055962B34507F00935932 /* Way.swift */,
+				3579DBC02B5699E0006D0FC3 /* Comment.swift */,
 				351055982B3450A200935932 /* Tag.swift */,
 				355C773C2B42A64A006B4BE6 /* User.swift */,
 			);
@@ -172,6 +179,7 @@
 				3510558C2B3425FD00935932 /* MeView.swift */,
 				351055952B34505500935932 /* Models */,
 				351055922B34407200935932 /* Services */,
+				3579DBC92B56AB0E006D0FC3 /* Extensions */,
 				3570ED772B33001B00977D93 /* Assets.xcassets */,
 				355C77462B42B544006B4BE6 /* Mock */,
 				3570ED792B33001B00977D93 /* Preview Content */,
@@ -202,6 +210,15 @@
 				3570ED902B33001B00977D93 /* WaysUITestsLaunchTests.swift */,
 			);
 			path = WaysUITests;
+			sourceTree = "<group>";
+		};
+		3579DBC92B56AB0E006D0FC3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3579DBC42B56A7AA006D0FC3 /* DateFormater+.swift */,
+				3579DBC62B56A977006D0FC3 /* JSONDecoder+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		35D674F82B36D9410035C87E /* AllWays */ = {
@@ -355,12 +372,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				351055992B3450A200935932 /* Tag.swift in Sources */,
+				3579DBC52B56A7AA006D0FC3 /* DateFormater+.swift in Sources */,
 				351055972B34507F00935932 /* Way.swift in Sources */,
 				3510558F2B34264900935932 /* AllWaysView.swift in Sources */,
 				354E42532B44245C0097F5C4 /* HTTPResponseError.swift in Sources */,
 				358F11A72B3AE10B00EFC68A /* WayDetailView.swift in Sources */,
 				351055942B34408800935932 /* Database.swift in Sources */,
 				3510558D2B3425FD00935932 /* MeView.swift in Sources */,
+				3579DBC12B5699E0006D0FC3 /* Comment.swift in Sources */,
 				355C773D2B42A64A006B4BE6 /* User.swift in Sources */,
 				3570ED762B33001A00977D93 /* ContentView.swift in Sources */,
 				355C773F2B42AB7E006B4BE6 /* Client.swift in Sources */,
@@ -368,6 +387,7 @@
 				358F11A52B3AE0FB00EFC68A /* WayDetailReducer.swift in Sources */,
 				35D674F52B36D3970035C87E /* TagContext.swift in Sources */,
 				351055912B34265900935932 /* MyWays.swift in Sources */,
+				3579DBC72B56A977006D0FC3 /* JSONDecoder+.swift in Sources */,
 				354E424F2B44219E0097F5C4 /* WayService.swift in Sources */,
 				3570ED742B33001A00977D93 /* WaysApp.swift in Sources */,
 				3510559B2B34535200935932 /* WayContext.swift in Sources */,

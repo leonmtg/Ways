@@ -41,7 +41,7 @@ fileprivate let loadLocalAllWays = {
             fatalError("Failed to find allWays.json")
         }
         let data = try Data(contentsOf: url)
-        let ways = try JSONDecoder().decode([Way].self, from: data)
+        let ways = try JSONDecoder.decoderWithStrategy.decode([Way].self, from: data)
         return ways
     }
 }()
@@ -52,7 +52,7 @@ fileprivate let loadLocalWay: (Int) async throws -> Way = {
             fatalError("Failed to find way.json")
         }
         let data = try Data(contentsOf: url)
-        let way = try JSONDecoder().decode(Way.self, from: data)
+        let way = try JSONDecoder.decoderWithStrategy.decode(Way.self, from: data)
         return way
     }
 }()
