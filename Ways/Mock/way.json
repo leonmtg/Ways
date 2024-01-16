@@ -1,3 +1,14 @@
 {
-    
+    "name": "Duolingo",
+    "description": "Free interactive online course (incl. speaking and listening).",
+    "tags": [
+        {
+            "name": "Course",
+            "metatag": "way"
+        },
+        {
+            "name": "App"
+            "metatag": "way"
+        }
+    ]
 }

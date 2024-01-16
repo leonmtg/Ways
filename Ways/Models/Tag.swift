@@ -9,10 +9,11 @@ import Foundation
 import SwiftData
 
 enum Metatag: String, Codable {
-    case VARK = "vark"
-    case Way = "way"
-    case Level = "level"
-    case Age = "age"
+    case VARK = "vark" // For visual, aural, read/write, kinesthetic
+    case Way = "way" // For app, course, book, news source, website
+    case Level = "level" // For A1, A2, B1, B2, C1, C2
+    case Age = "age" // For Adult, Child
+    case Platform = "platform" // For iOS, Android, macOS, Windows
 }
 
 @Model

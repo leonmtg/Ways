@@ -1,2 +1,86 @@
 [
+    {
+        "name": "Duolingo",
+        "description": "Free interactive online course (incl. speaking and listening).",
+        "tags": [
+            {
+                "name": "Course",
+                "metatag": "way"
+            },
+            {
+                "name": "App"
+                "metatag": "way"
+            }
+        ]
+    },
+    {
+        "name": "Memrise",
+        "description": "Online learning tool for learning vocabulary (Flashcard-style).",
+        "tags": [
+            {
+                "name": "Flashcard",
+                "metatag": "way"
+            },
+            {
+                "name": "App"
+                "metatag": "way"
+            }
+        ]
+    },
+    {
+        "name": "Busuu",
+        "description": "Interactive course with vocabulary training and possibility of interacting with native speakers for corrections in your exercises.",
+        "tags": [
+            {
+                "name": "Course",
+                "metatag": "way"
+            },
+            {
+                "name": "App"
+                "metatag": "way"
+            }
+        ]
+    },
+    {
+        "name": "Quizlet",
+        "description": "General app (with website option) that can be used to create flashcards or study through other people's sets. Includes games to make the flashcard study more entertaining.",
+        "tags": [
+            {
+                "name": "Flashcard",
+                "metatag": "way"
+            },
+            {
+                "name": "App"
+                "metatag": "way"
+            }
+        ]
+    },
+    {
+        "name": "Anki",
+        "description": "Anki is a general-purpose flashcard app, but it's ideal for vocabulary study. It has an excellent "spaced repetition" algorithm, which means that familiar words are asked less and less often, while words you struggle with come up frequently. It's a great supplement to Duolingo.",
+        "tags": [
+            {
+                "name": "Flashcard",
+                "metatag": "way"
+            },
+            {
+                "name": "App"
+                "metatag": "way"
+            }
+        ]
+    },
+    {
+        "name": "Tobo",
+        "description": "Flashcard app with vocabulary groups. You can unlock the next groups by studying the previous ones. Includes learning, practicing, revising and games.",
+        "tags": [
+            {
+                "name": "Flashcard",
+                "metatag": "way"
+            },
+            {
+                "name": "App"
+                "metatag": "way"
+            }
+        ]
+    },
 ]
