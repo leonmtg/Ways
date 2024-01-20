@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3508ADF12B5BD8B9002182DC /* ScoreSumReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508ADF02B5BD8B9002182DC /* ScoreSumReducer.swift */; };
+		3508ADF32B5BD8C8002182DC /* ScoreSumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508ADF22B5BD8C8002182DC /* ScoreSumView.swift */; };
+		3508ADF52B5BD8E6002182DC /* ScoreSubmitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508ADF42B5BD8E6002182DC /* ScoreSubmitView.swift */; };
+		3508ADF72B5BD909002182DC /* ScoreSubmitReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508ADF62B5BD909002182DC /* ScoreSubmitReducer.swift */; };
+		3508ADFA2B5BDAD3002182DC /* MultiPromotionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508ADF92B5BDAD3002182DC /* MultiPromotionReducer.swift */; };
+		3508ADFC2B5BDB14002182DC /* MultiPromotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508ADFB2B5BDB14002182DC /* MultiPromotionView.swift */; };
+		3508ADFE2B5BDB23002182DC /* SinglePromotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508ADFD2B5BDB23002182DC /* SinglePromotionView.swift */; };
+		3508AE002B5BDB32002182DC /* SinglePromotionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508ADFF2B5BDB32002182DC /* SinglePromotionReducer.swift */; };
+		3508AE022B5BDBB0002182DC /* MultiPromotionDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508AE012B5BDBB0002182DC /* MultiPromotionDetailReducer.swift */; };
+		3508AE062B5BDBDD002182DC /* MultiPromotionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508AE052B5BDBDD002182DC /* MultiPromotionDetailView.swift */; };
+		3508AE082B5BDC5C002182DC /* SinglePromotionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508AE072B5BDC5C002182DC /* SinglePromotionDetailView.swift */; };
+		3508AE0A2B5BDC75002182DC /* SinglePromotionDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508AE092B5BDC75002182DC /* SinglePromotionDetailReducer.swift */; };
 		3510558D2B3425FD00935932 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510558C2B3425FD00935932 /* MeView.swift */; };
 		3510558F2B34264900935932 /* AllWaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510558E2B34264900935932 /* AllWaysView.swift */; };
 		351055912B34265900935932 /* MyWays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351055902B34265900935932 /* MyWays.swift */; };
@@ -58,6 +70,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3508ADF02B5BD8B9002182DC /* ScoreSumReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSumReducer.swift; sourceTree = "<group>"; };
+		3508ADF22B5BD8C8002182DC /* ScoreSumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSumView.swift; sourceTree = "<group>"; };
+		3508ADF42B5BD8E6002182DC /* ScoreSubmitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSubmitView.swift; sourceTree = "<group>"; };
+		3508ADF62B5BD909002182DC /* ScoreSubmitReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSubmitReducer.swift; sourceTree = "<group>"; };
+		3508ADF92B5BDAD3002182DC /* MultiPromotionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPromotionReducer.swift; sourceTree = "<group>"; };
+		3508ADFB2B5BDB14002182DC /* MultiPromotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPromotionView.swift; sourceTree = "<group>"; };
+		3508ADFD2B5BDB23002182DC /* SinglePromotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePromotionView.swift; sourceTree = "<group>"; };
+		3508ADFF2B5BDB32002182DC /* SinglePromotionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePromotionReducer.swift; sourceTree = "<group>"; };
+		3508AE012B5BDBB0002182DC /* MultiPromotionDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPromotionDetailReducer.swift; sourceTree = "<group>"; };
+		3508AE052B5BDBDD002182DC /* MultiPromotionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPromotionDetailView.swift; sourceTree = "<group>"; };
+		3508AE072B5BDC5C002182DC /* SinglePromotionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePromotionDetailView.swift; sourceTree = "<group>"; };
+		3508AE092B5BDC75002182DC /* SinglePromotionDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePromotionDetailReducer.swift; sourceTree = "<group>"; };
 		3510558C2B3425FD00935932 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		3510558E2B34264900935932 /* AllWaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWaysView.swift; sourceTree = "<group>"; };
 		351055902B34265900935932 /* MyWays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWays.swift; sourceTree = "<group>"; };
@@ -119,6 +143,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3508ADEF2B5BD845002182DC /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				3579DBCC2B56B0C0006D0FC3 /* CommentsReducer.swift */,
+				3579DBCA2B56B0AC006D0FC3 /* CommentsView.swift */,
+				3508ADF02B5BD8B9002182DC /* ScoreSumReducer.swift */,
+				3508ADF22B5BD8C8002182DC /* ScoreSumView.swift */,
+				3508ADF62B5BD909002182DC /* ScoreSubmitReducer.swift */,
+				3508ADF42B5BD8E6002182DC /* ScoreSubmitView.swift */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		3508ADF82B5BD9FF002182DC /* Promotion */ = {
+			isa = PBXGroup;
+			children = (
+				3508ADF92B5BDAD3002182DC /* MultiPromotionReducer.swift */,
+				3508ADFB2B5BDB14002182DC /* MultiPromotionView.swift */,
+				3508AE012B5BDBB0002182DC /* MultiPromotionDetailReducer.swift */,
+				3508AE052B5BDBDD002182DC /* MultiPromotionDetailView.swift */,
+				3508ADFF2B5BDB32002182DC /* SinglePromotionReducer.swift */,
+				3508ADFD2B5BDB23002182DC /* SinglePromotionView.swift */,
+				3508AE092B5BDC75002182DC /* SinglePromotionDetailReducer.swift */,
+				3508AE072B5BDC5C002182DC /* SinglePromotionDetailView.swift */,
+			);
+			path = Promotion;
+			sourceTree = "<group>";
+		};
 		351055922B34407200935932 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +230,9 @@
 			children = (
 				3570ED732B33001A00977D93 /* WaysApp.swift */,
 				3570ED752B33001A00977D93 /* ContentView.swift */,
+				3508ADF82B5BD9FF002182DC /* Promotion */,
 				35D674F82B36D9410035C87E /* AllWays */,
+				3508ADEF2B5BD845002182DC /* Comments */,
 				351055902B34265900935932 /* MyWays.swift */,
 				3510558C2B3425FD00935932 /* MeView.swift */,
 				351055952B34505500935932 /* Models */,
@@ -232,8 +286,6 @@
 				35D674F62B36D9300035C87E /* AllWaysReducer.swift */,
 				358F11A42B3AE0FB00EFC68A /* WayDetailReducer.swift */,
 				358F11A62B3AE10B00EFC68A /* WayDetailView.swift */,
-				3579DBCC2B56B0C0006D0FC3 /* CommentsReducer.swift */,
-				3579DBCA2B56B0AC006D0FC3 /* CommentsView.swift */,
 			);
 			path = AllWays;
 			sourceTree = "<group>";
@@ -377,28 +429,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3508AE022B5BDBB0002182DC /* MultiPromotionDetailReducer.swift in Sources */,
 				351055992B3450A200935932 /* Tag.swift in Sources */,
+				3508ADF32B5BD8C8002182DC /* ScoreSumView.swift in Sources */,
+				3508AE082B5BDC5C002182DC /* SinglePromotionDetailView.swift in Sources */,
 				3579DBC52B56A7AA006D0FC3 /* DateFormater+.swift in Sources */,
+				3508ADF72B5BD909002182DC /* ScoreSubmitReducer.swift in Sources */,
 				351055972B34507F00935932 /* Way.swift in Sources */,
+				3508AE002B5BDB32002182DC /* SinglePromotionReducer.swift in Sources */,
 				3510558F2B34264900935932 /* AllWaysView.swift in Sources */,
 				354E42532B44245C0097F5C4 /* HTTPResponseError.swift in Sources */,
+				3508ADF52B5BD8E6002182DC /* ScoreSubmitView.swift in Sources */,
+				3508ADFA2B5BDAD3002182DC /* MultiPromotionReducer.swift in Sources */,
 				358F11A72B3AE10B00EFC68A /* WayDetailView.swift in Sources */,
 				351055942B34408800935932 /* Database.swift in Sources */,
 				3510558D2B3425FD00935932 /* MeView.swift in Sources */,
 				3579DBC12B5699E0006D0FC3 /* Comment.swift in Sources */,
 				355C773D2B42A64A006B4BE6 /* User.swift in Sources */,
 				3570ED762B33001A00977D93 /* ContentView.swift in Sources */,
+				3508ADFC2B5BDB14002182DC /* MultiPromotionView.swift in Sources */,
 				355C773F2B42AB7E006B4BE6 /* Client.swift in Sources */,
 				35D674F72B36D9300035C87E /* AllWaysReducer.swift in Sources */,
+				3508AE0A2B5BDC75002182DC /* SinglePromotionDetailReducer.swift in Sources */,
+				3508ADF12B5BD8B9002182DC /* ScoreSumReducer.swift in Sources */,
 				358F11A52B3AE0FB00EFC68A /* WayDetailReducer.swift in Sources */,
 				35D674F52B36D3970035C87E /* TagContext.swift in Sources */,
 				351055912B34265900935932 /* MyWays.swift in Sources */,
 				3579DBCD2B56B0C0006D0FC3 /* CommentsReducer.swift in Sources */,
+				3508AE062B5BDBDD002182DC /* MultiPromotionDetailView.swift in Sources */,
 				3579DBC72B56A977006D0FC3 /* JSONDecoder+.swift in Sources */,
 				354E424F2B44219E0097F5C4 /* WayService.swift in Sources */,
 				3570ED742B33001A00977D93 /* WaysApp.swift in Sources */,
 				3510559B2B34535200935932 /* WayContext.swift in Sources */,
 				3579DBCB2B56B0AC006D0FC3 /* CommentsView.swift in Sources */,
+				3508ADFE2B5BDB23002182DC /* SinglePromotionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
