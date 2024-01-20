@@ -17,6 +17,8 @@
 		3508AE0A2B5BDC75002182DC /* SinglePromotionDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508AE092B5BDC75002182DC /* SinglePromotionDetailReducer.swift */; };
 		3508AE0C2B5BEA9E002182DC /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508AE0B2B5BEA9E002182DC /* RatingView.swift */; };
 		3508AE0E2B5BEAAC002182DC /* RatingOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508AE0D2B5BEAAC002182DC /* RatingOutlineView.swift */; };
+		3508AE102B5BF203002182DC /* FavoriteReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508AE0F2B5BF203002182DC /* FavoriteReducer.swift */; };
+		3508AE122B5BF211002182DC /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508AE112B5BF211002182DC /* FavoriteButton.swift */; };
 		3510558D2B3425FD00935932 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510558C2B3425FD00935932 /* MeView.swift */; };
 		3510558F2B34264900935932 /* AllWaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510558E2B34264900935932 /* AllWaysView.swift */; };
 		351055912B34265900935932 /* MyWays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351055902B34265900935932 /* MyWays.swift */; };
@@ -78,6 +80,8 @@
 		3508AE092B5BDC75002182DC /* SinglePromotionDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePromotionDetailReducer.swift; sourceTree = "<group>"; };
 		3508AE0B2B5BEA9E002182DC /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		3508AE0D2B5BEAAC002182DC /* RatingOutlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingOutlineView.swift; sourceTree = "<group>"; };
+		3508AE0F2B5BF203002182DC /* FavoriteReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteReducer.swift; sourceTree = "<group>"; };
+		3508AE112B5BF211002182DC /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		3510558C2B3425FD00935932 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		3510558E2B34264900935932 /* AllWaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWaysView.swift; sourceTree = "<group>"; };
 		351055902B34265900935932 /* MyWays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWays.swift; sourceTree = "<group>"; };
@@ -280,6 +284,8 @@
 				35D674F62B36D9300035C87E /* AllWaysReducer.swift */,
 				358F11A42B3AE0FB00EFC68A /* WayDetailReducer.swift */,
 				358F11A62B3AE10B00EFC68A /* WayDetailView.swift */,
+				3508AE0F2B5BF203002182DC /* FavoriteReducer.swift */,
+				3508AE112B5BF211002182DC /* FavoriteButton.swift */,
 			);
 			path = AllWays;
 			sourceTree = "<group>";
@@ -430,11 +436,13 @@
 				351055972B34507F00935932 /* Way.swift in Sources */,
 				3508AE002B5BDB32002182DC /* SinglePromotionReducer.swift in Sources */,
 				3510558F2B34264900935932 /* AllWaysView.swift in Sources */,
+				3508AE102B5BF203002182DC /* FavoriteReducer.swift in Sources */,
 				354E42532B44245C0097F5C4 /* HTTPResponseError.swift in Sources */,
 				3508ADFA2B5BDAD3002182DC /* MultiPromotionReducer.swift in Sources */,
 				358F11A72B3AE10B00EFC68A /* WayDetailView.swift in Sources */,
 				3508AE0C2B5BEA9E002182DC /* RatingView.swift in Sources */,
 				351055942B34408800935932 /* Database.swift in Sources */,
+				3508AE122B5BF211002182DC /* FavoriteButton.swift in Sources */,
 				3510558D2B3425FD00935932 /* MeView.swift in Sources */,
 				3579DBC12B5699E0006D0FC3 /* Comment.swift in Sources */,
 				355C773D2B42A64A006B4BE6 /* User.swift in Sources */,
