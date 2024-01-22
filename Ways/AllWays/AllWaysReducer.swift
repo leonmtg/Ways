@@ -32,8 +32,11 @@ struct AllWaysReducer {
                 return .none
             case .addWay:
                 do {
-                    let randomWayName = ["Duolingo", "Anki", "Harry Potter", "Lord of the Rings", "Berliner Platz"].randomElement()!
-                    try context.add(.init(name: randomWayName, summary: "No Summary", tags: []))
+                    let names = ["Duolingo", "Anki", "Harry Potter", "Lord of the Rings", "Berliner Platz"]
+                    let randomWayName = names.randomElement()!
+                    // TODO: Need to be deleted!
+                    let lastId = state.ways.last?.id ?? 0
+                    try context.add(.init(id:lastId + 1, name: randomWayName, summary: "No Summary", tags: []))
                 } catch {
                     print("Failed to add")
                 }

@@ -32,6 +32,7 @@ struct WayDetailView: View {
             store: Store(
                 initialState: WayDetailReducer.State(
                     way: Way(
+                        id: 666,
                         name: "Example Way",
                         summary: "Example Way is just a placeholder here.",
                         tags: []
