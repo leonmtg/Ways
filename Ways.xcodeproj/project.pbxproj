@@ -294,8 +294,8 @@
 		35D674F82B36D9410035C87E /* AllWays */ = {
 			isa = PBXGroup;
 			children = (
-				3510558E2B34264900935932 /* AllWaysView.swift */,
 				35D674F62B36D9300035C87E /* AllWaysReducer.swift */,
+				3510558E2B34264900935932 /* AllWaysView.swift */,
 				358F11A42B3AE0FB00EFC68A /* WayDetailReducer.swift */,
 				358F11A62B3AE10B00EFC68A /* WayDetailView.swift */,
 				3508AE0F2B5BF203002182DC /* FavoriteReducer.swift */,

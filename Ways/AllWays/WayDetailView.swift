@@ -14,6 +14,15 @@ struct WayDetailView: View {
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             Form {
+                Text(viewStore.way.summary)
+                HStack(alignment: .firstTextBaseline) {
+                    Text("Favorite")
+                    
+                    Spacer()
+                    
+                    FavoriteButton(store: self.store.scope(state: \.favorite, action: \.favorite))
+                }
+                .buttonStyle(.borderless)
                 Button("Delete") {
                     viewStore.send(.deleteButtonTapped)
                 }
