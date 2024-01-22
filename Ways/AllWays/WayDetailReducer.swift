@@ -13,11 +13,19 @@ struct WayDetailReducer {
     struct State: Equatable {
         let way: Way
         @PresentationState var alert: AlertState<Action.Alert>?
+        
+        var favoriteAlert: AlertState<FavoriteAction.Alert>?
+        
+        var favorite: FavoriteState<Way.ID> {
+            get { .init(alert: self.favoriteAlert, id: way.id, isFavorite: way.isFavorite) }
+            set { (self.favoriteAlert, way.isFavorite) = (newValue.alert, newValue.isFavorite) }
+        }
     }
-    enum Action: Equatable {
+    enum Action {
         case deleteButtonTapped
         case alert(PresentationAction<Alert>)
         case delegate(Delegate)
+        case favorite(FavoriteAction)
         
         enum Alert {
           case confirmDeletion
@@ -29,7 +37,12 @@ struct WayDetailReducer {
     
     @Dependency(\.dismiss) var dismiss
     
+    let favorite: @Sendable (Way.ID, Bool) async throws -> Bool
+    
     var body: some ReducerOf<Self> {
+        Scope(state: \.favorite, action: \.favorite) {
+          FavoriteReducer(favorite: self.favorite)
+        }
         Reduce { state, action in
             switch action {
             case .deleteButtonTapped:
@@ -43,6 +56,8 @@ struct WayDetailReducer {
             case .alert:
                 return .none
             case .delegate:
+                return .none
+            case .favorite(_):
                 return .none
             }
         }

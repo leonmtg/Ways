@@ -15,7 +15,7 @@ struct AllWaysReducer {
         var path = StackState<WayDetailReducer.State>()
     }
     
-    enum Action: Equatable {
+    enum Action {
         case queryWaysChanged([Way])
         case addWay
         case deleteWay(Way)
@@ -36,7 +36,7 @@ struct AllWaysReducer {
                     let randomWayName = names.randomElement()!
                     // TODO: Need to be deleted!
                     let lastId = state.ways.last?.id ?? 0
-                    try context.add(.init(id:lastId + 1, name: randomWayName, summary: "No Summary", tags: []))
+                    try context.add(.init(id:lastId + 1, name: randomWayName, summary: "No Summary", tags: [], isFavorite: false))
                 } catch {
                     print("Failed to add")
                 }
@@ -53,7 +53,7 @@ struct AllWaysReducer {
             }
         }
         .forEach(\.path, action: \.path) {
-          WayDetailReducer()
+          WayDetailReducer(favorite: favorite(id:isFavorite:))
         }
     }
 }

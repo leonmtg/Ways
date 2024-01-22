@@ -15,7 +15,7 @@ struct FavoriteState<ID: Hashable & Sendable>: Equatable {
 }
 
 @CasePathable
-enum FavoriteAction {
+enum FavoriteAction {    
     case alert(PresentationAction<Alert>)
     case buttonTapped
     case response(Result<Bool, Error>)

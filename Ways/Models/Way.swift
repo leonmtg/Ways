@@ -16,11 +16,14 @@ final class Way: Identifiable {
     // Prevent from too many Tags
     @Relationship(maximumModelCount: 10, inverse: \Tag.ways) var tags: [Tag]
     
-    init(id: Int, name: String, summary: String, tags: [Tag]) {
+    var isFavorite: Bool
+    
+    init(id: Int, name: String, summary: String, tags: [Tag], isFavorite: Bool) {
         self.id = id
         self.name = name
         self.summary = summary
         self.tags = tags
+        self.isFavorite = isFavorite
     }
     
     init(from decoder: Decoder) throws {
@@ -29,6 +32,7 @@ final class Way: Identifiable {
         name = try container.decode(String.self, forKey: .name)
         summary = try container.decode(String.self, forKey: .summary)
         tags = try container.decode([Tag].self, forKey: .tags)
+        isFavorite = try container.decode(Bool.self, forKey: .isFavorite)
     }
 }
 
@@ -38,6 +42,7 @@ extension Way: Codable {
         case name
         case summary = "description"
         case tags
+        case isFavorite
     }
     
     func encode(to encoder: Encoder) throws {
@@ -46,5 +51,6 @@ extension Way: Codable {
         try container.encode(name, forKey: .name)
         try container.encode(summary, forKey: .summary)
         try container.encode(tags, forKey: .tags)
+        try container.encode(isFavorite, forKey: .isFavorite)
     }
 }

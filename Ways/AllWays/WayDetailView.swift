@@ -35,13 +35,30 @@ struct WayDetailView: View {
                         id: 666,
                         name: "Example Way",
                         summary: "Example Way is just a placeholder here.",
-                        tags: []
+                        tags: [],
+                        isFavorite: false
                     )
                 )
             ) {
-                WayDetailReducer()
+                WayDetailReducer(favorite: favorite(id:isFavorite:))
             }
         )
     }
     .modelContext(context)
+}
+
+struct FavoriteError: LocalizedError, Equatable {
+    var errorDescription: String? {
+        "Favoriting failed."
+    }
+}
+
+// TODO: WIP
+@Sendable func favorite<ID>(id: ID, isFavorite: Bool) async throws -> Bool {
+    try await Task.sleep(for: .seconds(1))
+    if .random(in: 0...1) > 0.25 {
+        return isFavorite
+    } else {
+        throw FavoriteError()
+    }
 }
