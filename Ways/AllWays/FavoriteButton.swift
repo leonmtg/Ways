@@ -6,13 +6,20 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
-struct FavoriteButton: View {
+struct FavoriteButton<ID: Hashable & Sendable>: View {
+    let store: Store<FavoriteState<ID>, FavoriteAction>
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
+            Button {
+                viewStore.send(.buttonTapped)
+            } label: {
+                Image(systemName: "heart")
+                    .symbolVariant(viewStore.isFavorite ? .fill : .none)
+            }
+            .alert(store: self.store.scope(state: \.$alert, action: \.alert))
+        }
     }
-}
-
-#Preview {
-    FavoriteButton()
 }
