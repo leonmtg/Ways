@@ -53,7 +53,7 @@ struct AllWaysReducer {
             }
         }
         .forEach(\.path, action: \.path) {
-          WayDetailReducer(favorite: favorite(id:isFavorite:))
+          WayDetailReducer()
         }
     }
 }

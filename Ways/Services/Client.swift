@@ -11,20 +11,24 @@ import Dependencies
 struct Client {
     var allWay: () async throws -> [Way]
     var way: (Int) async throws -> Way
+    var favoriteWay: @Sendable (Way.ID, Bool) async throws -> Bool
 }
 
 extension Client: DependencyKey {
     static let liveValue = Self(
         allWay: loadLocalAllWays,
-        way: loadLocalWay
+        way: loadLocalWay,
+        favoriteWay: mockFavoriteWay
     )
     static let testValue = Self(
         allWay: loadLocalAllWays,
-        way: loadLocalWay
+        way: loadLocalWay,
+        favoriteWay: mockFavoriteWay
     )
     static let previewValue = Self(
         allWay: loadLocalAllWays,
-        way: loadLocalWay
+        way: loadLocalWay,
+        favoriteWay: mockFavoriteWay
     )
 }
 
@@ -54,6 +58,23 @@ fileprivate let loadLocalWay: (Int) async throws -> Way = {
         let data = try Data(contentsOf: url)
         let way = try JSONDecoder.decoderWithStrategy.decode(Way.self, from: data)
         return way
+    }
+}()
+
+struct FavoriteError: LocalizedError, Equatable {
+    var errorDescription: String? {
+        "Favoriting failed."
+    }
+}
+
+fileprivate let mockFavoriteWay: @Sendable (Way.ID, Bool) async throws -> Bool = {
+    return { _, isFavorite in
+        try await Task.sleep(for: .seconds(1))
+        if .random(in: 0...1) > 0.2 {
+            return isFavorite
+        } else {
+            throw FavoriteError()
+        }
     }
 }()
 

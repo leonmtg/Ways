@@ -36,12 +36,11 @@ struct WayDetailReducer {
     }
     
     @Dependency(\.dismiss) var dismiss
-    
-    let favorite: @Sendable (Way.ID, Bool) async throws -> Bool
+    @Dependency(\.client) var client
     
     var body: some ReducerOf<Self> {
         Scope(state: \.favorite, action: \.favorite) {
-          FavoriteReducer(favorite: self.favorite)
+            FavoriteReducer(favorite: self.client.favoriteWay)
         }
         Reduce { state, action in
             switch action {
