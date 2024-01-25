@@ -16,18 +16,18 @@ struct Client {
 
 extension Client: DependencyKey {
     static let liveValue = Self(
-        allWay: loadLocalAllWays,
-        way: loadLocalWay,
+        allWay: mockAllWays,
+        way: mockWay,
         favoriteWay: mockFavoriteWay
     )
     static let testValue = Self(
-        allWay: loadLocalAllWays,
-        way: loadLocalWay,
+        allWay: mockAllWays,
+        way: mockWay,
         favoriteWay: mockFavoriteWay
     )
     static let previewValue = Self(
-        allWay: loadLocalAllWays,
-        way: loadLocalWay,
+        allWay: mockAllWays,
+        way: mockWay,
         favoriteWay: mockFavoriteWay
     )
 }
@@ -39,22 +39,26 @@ extension DependencyValues {
     }
 }
 
-fileprivate let loadLocalAllWays = {
+fileprivate let mockAllWays: () async throws -> [Way] = {
     return {
         guard let url = Bundle.main.url(forResource: "allWays", withExtension: "json") else {
             fatalError("Failed to find allWays.json")
         }
+        try await Task.sleep(for: .seconds(1))
+        
         let data = try Data(contentsOf: url)
         let ways = try JSONDecoder.decoderWithStrategy.decode([Way].self, from: data)
         return ways
     }
 }()
 
-fileprivate let loadLocalWay: (Int) async throws -> Way = {
+fileprivate let mockWay: (Int) async throws -> Way = {
     return { _ in
         guard let url = Bundle.main.url(forResource: "way", withExtension: "json") else {
             fatalError("Failed to find way.json")
         }
+        try await Task.sleep(for: .seconds(1))
+        
         let data = try Data(contentsOf: url)
         let way = try JSONDecoder.decoderWithStrategy.decode(Way.self, from: data)
         return way
