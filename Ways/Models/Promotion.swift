@@ -7,6 +7,8 @@
 
 import Foundation
 
-struct Promotion {
-    
+struct Promotion: Promotable, Codable {
+    var ways: [Way]
+    var title: String?
+    var subTitle: String?
 }
