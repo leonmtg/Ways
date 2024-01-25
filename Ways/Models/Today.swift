@@ -16,21 +16,42 @@ struct Today: Decodable {
     }
 }
 
-enum Entry: Decodable {
+enum Entry: Codable {
     case promotion(Promotion)
     case promotions(Promotions)
     
-    private enum CodingKeys : String, CodingKey {
+    enum PredictKey: String, CodingKey {
+        case type
+    }
+    
+    enum TargetObjectType: String, Decodable {
         case promotion
         case promotions
     }
     
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        do {
-            self = .promotion(try container.decode(Promotion.self, forKey: .promotion))
-        } catch DecodingError.keyNotFound {
-            self = .promotions(try container.decode(Promotions.self, forKey: .promotions))
+        let container = try decoder.container(keyedBy: PredictKey.self)
+        let singleValueContainer = try decoder.singleValueContainer()
+        let targetObjectType = try container.decode(TargetObjectType.self, forKey: .type)
+        
+        switch targetObjectType {
+        case .promotion:
+            let promotion = try singleValueContainer.decode(Promotion.self)
+            self = .promotion(promotion)
+        case .promotions:
+            let promotions = try singleValueContainer.decode(Promotions.self)
+            self = .promotions(promotions)
+        }
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var singleContainer = encoder.singleValueContainer()
+        
+        switch self {
+        case .promotion(let p):
+            try singleContainer.encode(p)
+        case .promotions(let ps):
+            try singleContainer.encode(ps)
         }
     }
 }
