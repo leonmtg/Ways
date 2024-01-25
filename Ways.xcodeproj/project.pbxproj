@@ -28,6 +28,9 @@
 		351055972B34507F00935932 /* Way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351055962B34507F00935932 /* Way.swift */; };
 		351055992B3450A200935932 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351055982B3450A200935932 /* Tag.swift */; };
 		3510559B2B34535200935932 /* WayContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510559A2B34535200935932 /* WayContext.swift */; };
+		352BE42B2B62404B00A0746F /* PromotionsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352BE42A2B62404B00A0746F /* PromotionsReducer.swift */; };
+		352BE42D2B62405C00A0746F /* PromotionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352BE42C2B62405C00A0746F /* PromotionsView.swift */; };
+		352BE42F2B62447700A0746F /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352BE42E2B62447700A0746F /* Promotion.swift */; };
 		354E424F2B44219E0097F5C4 /* WayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E424E2B44219E0097F5C4 /* WayService.swift */; };
 		354E42532B44245C0097F5C4 /* HTTPResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E42522B44245C0097F5C4 /* HTTPResponseError.swift */; };
 		355C773D2B42A64A006B4BE6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C773C2B42A64A006B4BE6 /* User.swift */; };
@@ -93,6 +96,9 @@
 		351055962B34507F00935932 /* Way.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Way.swift; sourceTree = "<group>"; };
 		351055982B3450A200935932 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		3510559A2B34535200935932 /* WayContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayContext.swift; sourceTree = "<group>"; };
+		352BE42A2B62404B00A0746F /* PromotionsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsReducer.swift; sourceTree = "<group>"; };
+		352BE42C2B62405C00A0746F /* PromotionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsView.swift; sourceTree = "<group>"; };
+		352BE42E2B62447700A0746F /* Promotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
 		354E424E2B44219E0097F5C4 /* WayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayService.swift; sourceTree = "<group>"; };
 		354E42522B44245C0097F5C4 /* HTTPResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseError.swift; sourceTree = "<group>"; };
 		355C773C2B42A64A006B4BE6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -161,6 +167,8 @@
 		3508ADF82B5BD9FF002182DC /* Promotion */ = {
 			isa = PBXGroup;
 			children = (
+				352BE42A2B62404B00A0746F /* PromotionsReducer.swift */,
+				352BE42C2B62405C00A0746F /* PromotionsView.swift */,
 				3508ADF92B5BDAD3002182DC /* MultiPromotionReducer.swift */,
 				3508ADFB2B5BDB14002182DC /* MultiPromotionView.swift */,
 				3508AE012B5BDBB0002182DC /* MultiPromotionDetailReducer.swift */,
@@ -202,6 +210,7 @@
 				3579DBC02B5699E0006D0FC3 /* Comment.swift */,
 				351055982B3450A200935932 /* Tag.swift */,
 				355C773C2B42A64A006B4BE6 /* User.swift */,
+				352BE42E2B62447700A0746F /* Promotion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -454,6 +463,7 @@
 				354E42532B44245C0097F5C4 /* HTTPResponseError.swift in Sources */,
 				3508ADFA2B5BDAD3002182DC /* MultiPromotionReducer.swift in Sources */,
 				3508AE172B5C0656002182DC /* ShareReducer.swift in Sources */,
+				352BE42F2B62447700A0746F /* Promotion.swift in Sources */,
 				358F11A72B3AE10B00EFC68A /* WayDetailView.swift in Sources */,
 				3508AE0C2B5BEA9E002182DC /* RatingView.swift in Sources */,
 				351055942B34408800935932 /* Database.swift in Sources */,
@@ -461,11 +471,13 @@
 				3508AE152B5C0636002182DC /* ShareButton.swift in Sources */,
 				3510558D2B3425FD00935932 /* MeView.swift in Sources */,
 				3579DBC12B5699E0006D0FC3 /* Comment.swift in Sources */,
+				352BE42D2B62405C00A0746F /* PromotionsView.swift in Sources */,
 				355C773D2B42A64A006B4BE6 /* User.swift in Sources */,
 				3570ED762B33001A00977D93 /* ContentView.swift in Sources */,
 				3508ADFC2B5BDB14002182DC /* MultiPromotionView.swift in Sources */,
 				355C773F2B42AB7E006B4BE6 /* Client.swift in Sources */,
 				3508AE0E2B5BEAAC002182DC /* RatingOutlineView.swift in Sources */,
+				352BE42B2B62404B00A0746F /* PromotionsReducer.swift in Sources */,
 				35D674F72B36D9300035C87E /* AllWaysReducer.swift in Sources */,
 				3508AE0A2B5BDC75002182DC /* SinglePromotionDetailReducer.swift in Sources */,
 				358F11A52B3AE0FB00EFC68A /* WayDetailReducer.swift in Sources */,

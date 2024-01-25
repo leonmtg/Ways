@@ -20,9 +20,9 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            MyWays()
-                .tabItem {
-                    Label("My Ways", systemImage: "lightbulb.min")
+            PromotionsView()
+                .tabItem { 
+                    Label("Today", systemImage: "doc.text.image")
                         .environment(\.symbolVariants, .none)
                 }
             
@@ -34,6 +34,12 @@ struct ContentView: View {
             .tabItem {
                 Label("All Ways", systemImage: "infinity")
             }
+            
+            MyWays()
+                .tabItem {
+                    Label("My Ways", systemImage: "lightbulb.min")
+                        .environment(\.symbolVariants, .none)
+                }
             
             MeView()
                 .tabItem {
