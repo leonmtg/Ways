@@ -8,35 +8,29 @@
 import Foundation
 
 struct Today: Decodable {
-    var title: String?
-    var promotables: [any Promotable]
+    let entries: [Entry]
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        self.entries = try container.decode([Entry].self)
+    }
+}
+
+enum Entry: Decodable {
+    case promotion(Promotion)
+    case promotions(Promotions)
     
-    enum CodingKeys: String, CodingKey {
-        case title
-        case promotables = "promos"
+    private enum CodingKeys : String, CodingKey {
+        case promotion
+        case promotions
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        title = try container.decodeIfPresent(String.self, forKey: .title)
-        
-        var array = try container.nestedUnkeyedContainer(forKey: .promotables)
-        var promotables:[any Promotable] = []
-        while !array.isAtEnd {
-            if let promotion = try? array.decode(Promotion.self) {
-                promotables.append(promotion)
-            } else if let promotions = try? array.decode(Promotions.self) {
-                promotables.append(promotions)
-            }
+        do {
+            self = .promotion(try container.decode(Promotion.self, forKey: .promotion))
+        } catch DecodingError.keyNotFound {
+            self = .promotions(try container.decode(Promotions.self, forKey: .promotions))
         }
-        self.promotables = promotables
     }
-}
-
-protocol Promotable { }
-
-struct Promotions: Promotable, Codable {
-    var title: String?
-    var subTitle: String?
-    var promotions: [Promotion]
 }
