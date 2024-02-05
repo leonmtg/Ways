@@ -17,5 +17,19 @@ struct CommentCell: View {
 }
 
 #Preview {
-    CommentCell()
+    CommentCell(
+        store: Store(
+            initialState: CommentReducer.State(
+                comment: Comment(
+                    score: 5,
+                    subject: "Example Subject",
+                    date: Date(),
+                    comment: "It's a very good way to learn a whole new language!",
+                    commenter: "Leon"
+                )
+            )
+        ) {
+            CommentReducer()
+        }
+    )
 }

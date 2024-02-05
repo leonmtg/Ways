@@ -9,11 +9,25 @@ import SwiftUI
 import ComposableArchitecture
 
 struct CommentsView: View {
+    let store: StoreOf<CommentsReducer>
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    CommentsView()
+    NavigationStack {
+        CommentsView(
+            store: Store(
+                initialState: CommentsReducer.State(
+                    comments: [
+                        
+                    ]
+                )
+            ) {
+                CommentsReducer()
+            }
+        )
+    }
 }
