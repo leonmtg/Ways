@@ -161,6 +161,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		350571582B71130F00F8F41A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3508ADF82B5BD9FF002182DC /* Promotion */,
+				35D674F82B36D9410035C87E /* AllWays */,
+				3508ADEF2B5BD845002182DC /* Comments */,
+				351055902B34265900935932 /* MyWays.swift */,
+				3510558C2B3425FD00935932 /* MeView.swift */,
+				3508AE132B5C0625002182DC /* Share */,
+				350571572B7112E200F8F41A /* NavigateAndLoad */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		3508ADEF2B5BD845002182DC /* Comments */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,12 +276,7 @@
 			children = (
 				3570ED732B33001A00977D93 /* WaysApp.swift */,
 				3570ED752B33001A00977D93 /* ContentView.swift */,
-				3508ADF82B5BD9FF002182DC /* Promotion */,
-				35D674F82B36D9410035C87E /* AllWays */,
-				3508ADEF2B5BD845002182DC /* Comments */,
-				351055902B34265900935932 /* MyWays.swift */,
-				3510558C2B3425FD00935932 /* MeView.swift */,
-				3508AE132B5C0625002182DC /* Share */,
+				350571582B71130F00F8F41A /* Features */,
 				351055952B34505500935932 /* Models */,
 				351055922B34407200935932 /* Services */,
 				3579DBC92B56AB0E006D0FC3 /* Extensions */,
