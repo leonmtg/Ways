@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3505715A2B71139E00F8F41A /* NavigateAndLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350571592B71139E00F8F41A /* NavigateAndLoadView.swift */; };
+		3505715C2B7113AF00F8F41A /* NavigateAndLoadReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505715B2B7113AF00F8F41A /* NavigateAndLoadReducer.swift */; };
 		3508ADFA2B5BDAD3002182DC /* MultiPromotionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508ADF92B5BDAD3002182DC /* MultiPromotionReducer.swift */; };
 		3508ADFC2B5BDB14002182DC /* MultiPromotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508ADFB2B5BDB14002182DC /* MultiPromotionView.swift */; };
 		3508ADFE2B5BDB23002182DC /* SinglePromotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508ADFD2B5BDB23002182DC /* SinglePromotionView.swift */; };
@@ -79,6 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		350571592B71139E00F8F41A /* NavigateAndLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateAndLoadView.swift; sourceTree = "<group>"; };
+		3505715B2B7113AF00F8F41A /* NavigateAndLoadReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateAndLoadReducer.swift; sourceTree = "<group>"; };
 		3508ADF92B5BDAD3002182DC /* MultiPromotionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPromotionReducer.swift; sourceTree = "<group>"; };
 		3508ADFB2B5BDB14002182DC /* MultiPromotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPromotionView.swift; sourceTree = "<group>"; };
 		3508ADFD2B5BDB23002182DC /* SinglePromotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePromotionView.swift; sourceTree = "<group>"; };
@@ -161,6 +165,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		350571572B7112E200F8F41A /* NavigateAndLoad */ = {
+			isa = PBXGroup;
+			children = (
+				3505715B2B7113AF00F8F41A /* NavigateAndLoadReducer.swift */,
+				350571592B71139E00F8F41A /* NavigateAndLoadView.swift */,
+			);
+			path = NavigateAndLoad;
+			sourceTree = "<group>";
+		};
 		350571582B71130F00F8F41A /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +499,7 @@
 				3508AE172B5C0656002182DC /* ShareReducer.swift in Sources */,
 				352BE42F2B62447700A0746F /* Promotion.swift in Sources */,
 				358F11A72B3AE10B00EFC68A /* WayDetailView.swift in Sources */,
+				3505715A2B71139E00F8F41A /* NavigateAndLoadView.swift in Sources */,
 				3508AE0C2B5BEA9E002182DC /* RatingView.swift in Sources */,
 				353EBCDF2B6D27CD00AB8CF7 /* CommentReducer.swift in Sources */,
 				351055942B34408800935932 /* Database.swift in Sources */,
@@ -502,6 +516,7 @@
 				3508AE0E2B5BEAAC002182DC /* RatingOutlineView.swift in Sources */,
 				352BE42B2B62404B00A0746F /* PromotionsReducer.swift in Sources */,
 				35D674F72B36D9300035C87E /* AllWaysReducer.swift in Sources */,
+				3505715C2B7113AF00F8F41A /* NavigateAndLoadReducer.swift in Sources */,
 				3508AE0A2B5BDC75002182DC /* SinglePromotionDetailReducer.swift in Sources */,
 				358F11A52B3AE0FB00EFC68A /* WayDetailReducer.swift in Sources */,
 				353EBCE12B6D27DC00AB8CF7 /* CommentCell.swift in Sources */,
