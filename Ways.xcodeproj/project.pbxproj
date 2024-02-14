@@ -300,7 +300,6 @@
 				351055922B34407200935932 /* Services */,
 				3579DBC92B56AB0E006D0FC3 /* Extensions */,
 				3570ED772B33001B00977D93 /* Assets.xcassets */,
-				355C77462B42B544006B4BE6 /* Mock */,
 				3570ED792B33001B00977D93 /* Preview Content */,
 			);
 			path = Ways;
@@ -309,6 +308,7 @@
 		3570ED792B33001B00977D93 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				355C77462B42B544006B4BE6 /* Mock */,
 				3570ED7A2B33001B00977D93 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
