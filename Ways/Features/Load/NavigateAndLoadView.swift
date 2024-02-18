@@ -6,13 +6,28 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
-struct NavigateAndLoadView: View {
+struct NavigateAndLoadView<ContentView: View, Content: Reducer>: View  where Content.State: Equatable {
+    @Bindable var store: StoreOf<NavigateAndLoadReducer<Content>>
+    
+    @ViewBuilder var contentViewBuilder: (StoreOf<Content>) -> ContentView
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        IfLetStore(store.scope(state: \.optionalContent, action: \.optionalContent)) {
+            contentViewBuilder($0)
+        } else: {
+            ProgressView()
+        }
     }
 }
 
-#Preview {
-    NavigateAndLoadView()
-}
+//#Preview {
+//    NavigateAndLoadView()
+//}
+
+//protocol StoreSettableView: View {
+//    associatedtype Content: Reducer
+//    
+//    var store: Content { get set }
+//}
