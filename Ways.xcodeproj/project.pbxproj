@@ -63,6 +63,7 @@
 		35CFD0582B330156001BA959 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 35CFD0572B330156001BA959 /* ComposableArchitecture */; };
 		35D674F52B36D3970035C87E /* TagContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D674F42B36D3970035C87E /* TagContext.swift */; };
 		35D674F72B36D9300035C87E /* AllWaysReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D674F62B36D9300035C87E /* AllWaysReducer.swift */; };
+		35F4C58A2B8223850044AED3 /* ViewFirstAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4C5892B8223850044AED3 /* ViewFirstAppearModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,7 @@
 		35A2E6F52B73B684002C3716 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 		35D674F42B36D3970035C87E /* TagContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagContext.swift; sourceTree = "<group>"; };
 		35D674F62B36D9300035C87E /* AllWaysReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWaysReducer.swift; sourceTree = "<group>"; };
+		35F4C5892B8223850044AED3 /* ViewFirstAppearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFirstAppearModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +338,7 @@
 			children = (
 				3579DBC42B56A7AA006D0FC3 /* DateFormater+.swift */,
 				3579DBC62B56A977006D0FC3 /* JSONDecoder+.swift */,
+				35F4C5892B8223850044AED3 /* ViewFirstAppearModifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				3508AE022B5BDBB0002182DC /* MultiPromotionDetailReducer.swift in Sources */,
 				351055992B3450A200935932 /* Tag.swift in Sources */,
 				3508AE082B5BDC5C002182DC /* SinglePromotionDetailView.swift in Sources */,
+				35F4C58A2B8223850044AED3 /* ViewFirstAppearModifier.swift in Sources */,
 				3579DBC52B56A7AA006D0FC3 /* DateFormater+.swift in Sources */,
 				351055972B34507F00935932 /* Way.swift in Sources */,
 				3508AE002B5BDB32002182DC /* SinglePromotionReducer.swift in Sources */,
