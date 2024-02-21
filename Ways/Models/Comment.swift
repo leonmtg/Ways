@@ -6,10 +6,8 @@
 //
 
 import Foundation
-import SwiftData
 
-@Model
-final class Comment {
+struct Comment: Identifiable, Equatable {
     var id: UUID
     var score: Int
     var subject: String

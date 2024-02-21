@@ -35,6 +35,7 @@
 		352BE42F2B62447700A0746F /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352BE42E2B62447700A0746F /* Promotion.swift */; };
 		352BE4312B62473800A0746F /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352BE4302B62473800A0746F /* Today.swift */; };
 		352BE4332B6259E000A0746F /* Promotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352BE4322B6259E000A0746F /* Promotions.swift */; };
+		353731672B86152C00D5AD09 /* waySupplementary.json in Resources */ = {isa = PBXBuildFile; fileRef = 353731662B86152C00D5AD09 /* waySupplementary.json */; };
 		353EBCDF2B6D27CD00AB8CF7 /* CommentReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBCDE2B6D27CD00AB8CF7 /* CommentReducer.swift */; };
 		353EBCE12B6D27DC00AB8CF7 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBCE02B6D27DC00AB8CF7 /* CommentCell.swift */; };
 		354E424F2B44219E0097F5C4 /* WayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E424E2B44219E0097F5C4 /* WayService.swift */; };
@@ -58,8 +59,6 @@
 		3579DBCD2B56B0C0006D0FC3 /* CommentsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3579DBCC2B56B0C0006D0FC3 /* CommentsReducer.swift */; };
 		358F11A52B3AE0FB00EFC68A /* WayDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F11A42B3AE0FB00EFC68A /* WayDetailReducer.swift */; };
 		358F11A72B3AE10B00EFC68A /* WayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F11A62B3AE10B00EFC68A /* WayDetailView.swift */; };
-		35A2E6F42B73B676002C3716 /* LoadReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A2E6F32B73B676002C3716 /* LoadReducer.swift */; };
-		35A2E6F62B73B684002C3716 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A2E6F52B73B684002C3716 /* LoadView.swift */; };
 		35CFD0582B330156001BA959 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 35CFD0572B330156001BA959 /* ComposableArchitecture */; };
 		35D674F52B36D3970035C87E /* TagContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D674F42B36D3970035C87E /* TagContext.swift */; };
 		35D674F72B36D9300035C87E /* AllWaysReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D674F62B36D9300035C87E /* AllWaysReducer.swift */; };
@@ -112,6 +111,7 @@
 		352BE42E2B62447700A0746F /* Promotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
 		352BE4302B62473800A0746F /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
 		352BE4322B6259E000A0746F /* Promotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotions.swift; sourceTree = "<group>"; };
+		353731662B86152C00D5AD09 /* waySupplementary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = waySupplementary.json; sourceTree = "<group>"; };
 		353EBCDE2B6D27CD00AB8CF7 /* CommentReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentReducer.swift; sourceTree = "<group>"; };
 		353EBCE02B6D27DC00AB8CF7 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		354E424E2B44219E0097F5C4 /* WayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayService.swift; sourceTree = "<group>"; };
@@ -138,8 +138,6 @@
 		3579DBCC2B56B0C0006D0FC3 /* CommentsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsReducer.swift; sourceTree = "<group>"; };
 		358F11A42B3AE0FB00EFC68A /* WayDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayDetailReducer.swift; sourceTree = "<group>"; };
 		358F11A62B3AE10B00EFC68A /* WayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayDetailView.swift; sourceTree = "<group>"; };
-		35A2E6F32B73B676002C3716 /* LoadReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadReducer.swift; sourceTree = "<group>"; };
-		35A2E6F52B73B684002C3716 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 		35D674F42B36D3970035C87E /* TagContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagContext.swift; sourceTree = "<group>"; };
 		35D674F62B36D9300035C87E /* AllWaysReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWaysReducer.swift; sourceTree = "<group>"; };
 		35F4C5892B8223850044AED3 /* ViewFirstAppearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFirstAppearModifier.swift; sourceTree = "<group>"; };
@@ -176,8 +174,6 @@
 			children = (
 				3505715B2B7113AF00F8F41A /* NavigateAndLoadReducer.swift */,
 				350571592B71139E00F8F41A /* NavigateAndLoadView.swift */,
-				35A2E6F32B73B676002C3716 /* LoadReducer.swift */,
-				35A2E6F52B73B684002C3716 /* LoadView.swift */,
 			);
 			path = Load;
 			sourceTree = "<group>";
@@ -266,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				355C77402B42B0B1006B4BE6 /* allWays.json */,
+				353731662B86152C00D5AD09 /* waySupplementary.json */,
 				355C77422B42B52E006B4BE6 /* login.json */,
 				355C77432B42B52E006B4BE6 /* way.json */,
 			);
@@ -469,6 +466,7 @@
 				355C77412B42B0B1006B4BE6 /* allWays.json in Resources */,
 				3570ED7B2B33001B00977D93 /* Preview Assets.xcassets in Resources */,
 				3570ED782B33001B00977D93 /* Assets.xcassets in Resources */,
+				353731672B86152C00D5AD09 /* waySupplementary.json in Resources */,
 				355C77452B42B52E006B4BE6 /* way.json in Resources */,
 				355C77442B42B52E006B4BE6 /* login.json in Resources */,
 			);
@@ -511,7 +509,6 @@
 				358F11A72B3AE10B00EFC68A /* WayDetailView.swift in Sources */,
 				3505715A2B71139E00F8F41A /* NavigateAndLoadView.swift in Sources */,
 				3508AE0C2B5BEA9E002182DC /* RatingView.swift in Sources */,
-				35A2E6F62B73B684002C3716 /* LoadView.swift in Sources */,
 				353EBCDF2B6D27CD00AB8CF7 /* CommentReducer.swift in Sources */,
 				351055942B34408800935932 /* Database.swift in Sources */,
 				3508AE122B5BF211002182DC /* FavoriteButton.swift in Sources */,
@@ -529,7 +526,6 @@
 				35D674F72B36D9300035C87E /* AllWaysReducer.swift in Sources */,
 				3505715C2B7113AF00F8F41A /* NavigateAndLoadReducer.swift in Sources */,
 				3508AE0A2B5BDC75002182DC /* SinglePromotionDetailReducer.swift in Sources */,
-				35A2E6F42B73B676002C3716 /* LoadReducer.swift in Sources */,
 				358F11A52B3AE0FB00EFC68A /* WayDetailReducer.swift in Sources */,
 				353EBCE12B6D27DC00AB8CF7 /* CommentCell.swift in Sources */,
 				35D674F52B36D3970035C87E /* TagContext.swift in Sources */,

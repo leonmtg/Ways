@@ -10,25 +10,29 @@ import Dependencies
 
 struct Client {
     var allWay: () async throws -> [Way]
-    var way: (Int) async throws -> Way
+    var way: (Way.ID) async throws -> Way
     var favoriteWay: @Sendable (Way.ID, Bool) async throws -> Bool
+    var waySupplementary: (Way.ID) async throws -> [Comment]
 }
 
 extension Client: DependencyKey {
     static let liveValue = Self(
         allWay: mockAllWays,
         way: mockWay,
-        favoriteWay: mockFavoriteWay
+        favoriteWay: mockFavoriteWay,
+        waySupplementary: mockWaySupplementary
     )
     static let testValue = Self(
         allWay: mockAllWays,
         way: mockWay,
-        favoriteWay: mockFavoriteWay
+        favoriteWay: mockFavoriteWay,
+        waySupplementary: mockWaySupplementary
     )
     static let previewValue = Self(
         allWay: mockAllWays,
         way: mockWay,
-        favoriteWay: mockFavoriteWay
+        favoriteWay: mockFavoriteWay,
+        waySupplementary: mockWaySupplementary
     )
 }
 
@@ -52,7 +56,7 @@ fileprivate let mockAllWays: () async throws -> [Way] = {
     }
 }()
 
-fileprivate let mockWay: (Int) async throws -> Way = {
+fileprivate let mockWay: (Way.ID) async throws -> Way = {
     return { _ in
         guard let url = Bundle.main.url(forResource: "way", withExtension: "json") else {
             fatalError("Failed to find way.json")
@@ -82,4 +86,17 @@ fileprivate let mockFavoriteWay: @Sendable (Way.ID, Bool) async throws -> Bool =
     }
 }()
 
+
+fileprivate let mockWaySupplementary: (Way.ID) async throws -> [Comment] = {
+    return { _ in
+        guard let url = Bundle.main.url(forResource: "waySupplementary", withExtension: "json") else {
+            fatalError("Failed to find waySupplementary.json")
+        }
+        try await Task.sleep(for: .seconds(1))
+        
+        let data = try Data(contentsOf: url)
+        let comments = try JSONDecoder.decoderWithStrategy.decode([Comment].self, from: data)
+        return comments
+    }
+}()
 

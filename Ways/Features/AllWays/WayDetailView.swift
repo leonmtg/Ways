@@ -30,6 +30,12 @@ struct WayDetailView: View {
             .navigationTitle(Text(viewStore.way.name))
         }
         .alert(store: self.store.scope(state: \.$alert, action: \.alert))
+        .onFirstAppear {
+            self.store.send(.setNavigation(isActive: true))
+        }
+        .onDisappear { // TODO: We need a better event handler here.
+            self.store.send(.setNavigation(isActive: false))
+        }
     }
 }
 
