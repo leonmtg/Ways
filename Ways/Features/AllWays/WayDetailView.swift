@@ -40,7 +40,8 @@ struct WayDetailView: View {
 }
 
 #Preview {
-    let context = onlyMemoryContext // Must access container or context first here before use Models
+    @Dependency(\.database) var database
+    let context = database.modelContext() // Must access container or context first here before use Models
     
     return NavigationStack {
         WayDetailView(

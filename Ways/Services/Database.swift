@@ -10,8 +10,8 @@ import SwiftData
 import Dependencies
 
 struct Database {
-    var modelContainer: () throws -> ModelContainer
-    var modelContext: () throws -> ModelContext
+    var modelContainer: () -> ModelContainer
+    var modelContext: () -> ModelContext
 }
 
 extension Database: DependencyKey {
@@ -51,7 +51,7 @@ fileprivate let directoryModelContext: ModelContext = {
     return ModelContext(directoryModelContainer)
 }()
 
-let onlyMemoryContainer: ModelContainer = {
+private let onlyMemoryContainer: ModelContainer = {
     do {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: schema, configurations: config)
@@ -61,7 +61,7 @@ let onlyMemoryContainer: ModelContainer = {
     }
 }()
 
-let onlyMemoryContext: ModelContext = {
+private let onlyMemoryContext: ModelContext = {
     return ModelContext(onlyMemoryContainer)
 }()
 
